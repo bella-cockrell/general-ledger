@@ -1,0 +1,43 @@
+A basic accounting system aims to track and report on spending and income
+
+Test 1
+
+Scenario: Steve the employee wants to add a transaction to the accounting system.
+Given Steve received an invoice for a Macbook which was £2000
+And he wants to record it in the accounting system
+When he adds this transaction to the journal
+Then the general ledger gets updated
+
+Test 2
+
+Scenario: Jim the accountant wants to view all the company's transactions in the general ledger.
+Given Jim has an account
+When they enter a new transaction
+Then 
+
+Test 3
+
+Scenario: Christina the accountant wants to see the accounts on the general ledger
+Given 
+
+
+
+
+
+Feature: Quick Post
+In order to share my car
+As a car owner
+I want to publish it on an intranet with details like source, destination, time, email, phone no
+Scenario: Employee enter valid ride details to share
+Given Employee “Naveen” wanted to submit a source, destination and time as “Kammanahalli”, “Hebbal” and “5.30 pm”
+And “Naveen” email is “naveenhome@gmail.com” and phone no is “+91 9810547500”
+When “Naveen” click on “Share”
+Then Ride get added and “Naveen” get a message “Ride is shared.” with “OK” button
+And “Naveen” get redirected to the home page on clicking on “OK” button
+And “Naveen” can see his ride on top on “Home” page
+Scenario: Employee enter ride details to share without email id
+Given Employee “Naveen” wanted to submit a source, destination and time as “Kammanahalli”, “Hebbal” and “5.30 pm”
+And “Naveen” email is ” ” and phone no is “+91 9810547500”
+When “Naveen” click on “Share”
+Then “Naveen” get a message “Please add valid email Id”
+And Ride not get saved
