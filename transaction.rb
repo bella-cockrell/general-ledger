@@ -1,6 +1,6 @@
 class Transaction
-  attr_accessor :test
-  def initialize(test)
-    @test = ''
+  attr_accessor :amount
+  def initialize(amount)
+    @amount = amount
   end
 end

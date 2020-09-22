@@ -9,8 +9,8 @@ require_relative '../transaction'
 
 describe Transaction do
   context 'check transaction class exists' do
-    it "returns '' when instantiated with nil" do
-      expect(Transaction.new(nil)).to eq('')
+    it "returns 20.00 when instantiated with 20.00" do
+      expect(Transaction.new(20.00).amount).to eq(20.00)
     end
   end
 end
