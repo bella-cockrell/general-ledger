@@ -19,6 +19,13 @@ describe Journal do
             test.add_transaction("Hello")
             expect(test.list_of_transactions).to eq(["Hello"])
         end
+
+        it "adds transaction to list_of_transactions" do
+            test = Journal.new("test")
+            test.add_transaction("Hello")
+            test.add_transaction("World")
+            expect(test.list_of_transactions).to eq(["Hello", "World"])
+        end
     end
     # context ".transaction" do
     #     it "create a transaction" do
